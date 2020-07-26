@@ -54,7 +54,7 @@ namespace Fnews_Web
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=News}/{action=Index}/{id?}");
+                    pattern: "{controller=Login}/{action=Index}/{id?}");
             });
         }
     }
