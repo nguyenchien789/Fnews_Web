@@ -21,10 +21,10 @@ namespace Fnews_Web.Controllers
         }
 
         // GET: News
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
             var fnewsContext = _context.News.Where(n => n.IsActive == true).Include(x => x.NewsTag).ThenInclude(y => y.Tag)
-                .Include(x => x.Channel);
+                .Include(x => x.Channel).Where(x => x.ChannelId == id);
             return View(await fnewsContext.ToListAsync());
         }
 
