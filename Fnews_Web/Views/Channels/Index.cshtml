@@ -39,7 +39,7 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ChannelId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ChannelId">Details</a> |
+                <a asp-controller="News" asp-action="Index" asp-route-id="@item.ChannelId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ChannelId">Delete</a>
             </td>
         </tr>
